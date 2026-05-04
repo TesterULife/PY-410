@@ -1,0 +1,19 @@
+{% extends 'images/layout.html' %}
+{% load static %}
+
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block content %}
+<div class="features">
+    <h1>{{ title }}</h1>
+
+    <p1>{{ inf }}</p1>
+    <img class="db-image" src="{% static 'images/logos/PY-410_DB.jpg' %}" alt="DB">
+
+
+</div>
+{% endblock %}

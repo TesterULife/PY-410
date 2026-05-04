@@ -1,0 +1,97 @@
+/* ====== body ====== */
+body {
+    margin: 0;
+    display: flex;
+    background: #2c2c2c;
+}
+
+/* ====== sidebar ====== */
+aside {
+    width: 20%;
+    padding: 2.5%;
+    background: #181818;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* ====== logo ====== */
+aside img{
+    width: 100%;
+}
+
+aside .logo {
+    margin-left: 10px;
+    position: relative;
+    right: -30px;
+}
+
+/* ====== title ====== */
+aside h3{
+    font-size: 60px;
+}
+
+/* ====== navigation links ====== */
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    color: White;
+    display: block;
+    margin-top: 35px;
+    font-size: 25px;
+    transition: all .12s ease;
+}
+
+aside a {
+    text-decoration: none;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: #DC143C;
+    transform: scale(1.05);
+}
+
+aside i {
+    margin-right: 10px;
+}
+
+/* ====== layouts ====== */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.features {
+    max-width: 800px;
+    margin: 100px auto 0;
+    text-align: center;
+    color: #fff;
+}
+
+
+.features h1 {
+font-size: 50px;
+}
+
+.features p {
+font-size: 20px;
+max-width: 400px;
+margin: 20px auto
+}
+
+.features p1 {
+font-size: 25px;
+}
+
+/* ====== DataBase picture ====== */
+.db-image {
+    max-width: 140%;
+    width: 900px;
+    margin: 40px auto
+}
+
