@@ -1,5 +1,4 @@
 from django.contrib import admin
-from .models import Files, Logs
+from .models import Files
 
 admin.site.register(Files)
-admin.site.register(Logs)

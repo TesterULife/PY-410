@@ -1,4 +1,5 @@
 {% extends 'images/layout.html' %}
+{% load static %}
 
 {% block title %}
 {{ title }}
@@ -8,8 +9,17 @@
 {% block content %}
 <div class="features">
     <h1>{{ title }}</h1>
-
+    <img src="{% static 'images/logos/vacuum_cleaner.gif' %}"
+         alt="VC"
+         class="vacuum-gif">
     <p1>{{ inf }}</p1>
-    <button type="button" class="btn btn-danger">Удалить изображение</button>
+
+    <form method="get">
+        <input type="number"
+               name="image_id"
+               placeholder="Введите id">
+
+        <button type="submit" class="btn btn-info">Найти изображение</button>
+    </form>
 </div>
 {% endblock %}

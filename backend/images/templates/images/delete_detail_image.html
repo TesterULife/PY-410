@@ -1,0 +1,27 @@
+{% extends 'images/layout.html' %}
+{% load static %}
+
+{% block title %}
+Удаление изображение: {{ deleting_img.id }}
+{% endblock %}
+
+
+{% block content %}
+<div class="features">
+    <h1>Название: {{ deleting_img.clean_name }}</h1>
+    <h2>ID изображения: {{ gdeleting_img.id }}</h2>
+    <img src="{{ deleting_img.image.url }}">
+    <p>Дата создания: {{ deleting_img.created_at }}</p>
+    <a7>Вы действительно хотите удалить это изображение?</a7>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="delete-buttons">
+            <button type="submit" class="btn btn-danger">Удалить изображение</button>
+            <a href="{% url 'delete' %}" class="btn btn-warning">Вернуться в меню удаления</a>
+        </div>
+    </form>
+
+
+</div>
+{% endblock %}

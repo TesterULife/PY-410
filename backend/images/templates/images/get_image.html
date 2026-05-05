@@ -9,7 +9,33 @@
 <div class="features">
     <h1>{{ title }}</h1>
 
-    <p1>{{ inf }}</p1>
-    <button type="button" class="btn btn-info">Получить изображение</button>
+    <p1>{{ inf1 }}</p1>
+
+    <div class="image-grid">
+        {% if show_info %}
+
+            {% for el in show_info %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.clean_name }}</h3>
+                    <p>ID изображения: {{ el.id }}</p>
+                    <img src="{{ el.image.url }}" width="300">
+                    <p>Дата создания: {{ el.created_at }}</p>
+                </div>
+            {% endfor %}
+
+        {% else %}
+            <p>Изображений нет в базе</p>
+        {% endif %}
+    </div>
+
+
+    <p1>{{ inf2 }}</p1>
+    <form method="get">
+        <input type="number"
+            name="image_id"
+            placeholder="Введите id">
+
+    <button type="submit" class="btn btn-info ">Получить изображение</button>
+    </form>
 </div>
 {% endblock %}

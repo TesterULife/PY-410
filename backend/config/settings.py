@@ -2,7 +2,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+from .logging import LOGGING
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # ======SECRET KEY from .env======#
@@ -14,8 +15,6 @@ DEBUG = os.getenv("DEBUG") == "True"
 
 ALLOWED_HOSTS = []
 
-
-# Application definition
 
 INSTALLED_APPS = [
     'images',
@@ -69,8 +68,7 @@ DATABASES = {
     }
 }
 
-# Password validation
-# https://docs.djangoproject.com/en/6.0/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -88,9 +86,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/6.0/topics/i18n/
-
 LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
@@ -99,9 +94,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/6.0/howto/static-files/
+TIME_ZONE = 'Europe/Moscow'
 
 STATIC_URL = 'static/'
 
@@ -109,3 +102,6 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
