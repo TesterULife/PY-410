@@ -1,0 +1,25 @@
+{% extends 'images/layout.html' %}
+{% load static %}
+
+{% block title %}
+404
+{% endblock %}
+
+
+{% block content %}
+<div class="features">
+    <h1>Изображение не найдено</h1>
+
+    <img src="{% static 'images/logos/tobi.jpeg' %}"
+         alt="Tobi"
+         class="info-gif">
+
+    <p>{{ message }}</p>
+
+    <script>
+        setTimeout(function () {
+            window.location.href = "{{ redirect_url }}";
+        }, 4000);
+    </script>
+</div>
+{% endblock %}

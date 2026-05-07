@@ -13,6 +13,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 DEBUG = os.getenv("DEBUG") == "True"
 
+# список доменов
 ALLOWED_HOSTS = []
 
 
@@ -26,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# промежуточные обработчики запросов и ответов
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -36,6 +38,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# главный файл маршрутов url
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
@@ -88,8 +91,6 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'UTC'
-
 USE_I18N = True
 
 USE_TZ = True
@@ -100,7 +101,7 @@ STATIC_URL = 'static/'
 
 # определение каталога статических файлов для проекта
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "images/static",
 ]
 
 MEDIA_ROOT = BASE_DIR / 'media'

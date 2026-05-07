@@ -1,0 +1,28 @@
+{% extends 'images/layout.html' %}
+{% load static %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+
+{% block content %}
+<div class="features">
+    <h1>{{ title }}</h1>
+
+    <h2>Здесь вы можете добавлять, просматривать и удалять изображения на сайте.</h2>
+    <p>Для этого воспользуйтесь кнопками ниже или панелью навигации слева.</p>
+
+    <img src="{% static 'images/logos/cloud.png' %}"
+         alt="Tobi"
+         class="info-gif">
+
+    <div class="block-buttons">
+      <a href="{% url 'upload' %}" class="btn btn-success">Добавить изображение</a>
+      <a href="{% url 'get' %}" class="btn btn-info">Посмотреть изображения</a>
+      <a href="{% url 'delete' %}" class="btn btn-danger">Удалить изображения</a>
+    </div>
+
+    </form>
+</div>
+{% endblock %}

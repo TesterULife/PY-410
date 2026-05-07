@@ -9,7 +9,7 @@
 <div class="features">
     <h1>{{ title }}</h1>
 
-    <p1>{{ inf1 }}</p1>
+    <h2>{{ inf1 }}</h2>
 
     <div class="image-grid">
         {% if show_info %}
@@ -19,7 +19,7 @@
                     <h3>{{ el.clean_name }}</h3>
                     <p>ID изображения: {{ el.id }}</p>
                     <img src="{{ el.image.url }}" width="300">
-                    <p>Дата создания: {{ el.created_at }}</p>
+                    <p>Дата: {{ el.created_at }}</p>
                 </div>
             {% endfor %}
 
@@ -29,7 +29,7 @@
     </div>
 
 
-    <p1>{{ inf2 }}</p1>
+    <p>{{ inf2 }}</p>
     <form method="get">
         <input type="number"
             name="image_id"

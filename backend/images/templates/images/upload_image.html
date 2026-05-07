@@ -10,14 +10,14 @@
 <div class="features">
     <h1>{{ title }}</h1>
 
-    <p1>{{ inf }}</p1>
+    <h2>{{ inf }}</h2>
 
     <form action="" method="post" enctype="multipart/form-data">
 
     {% csrf_token %}
         <img src="{% static 'images/logos/magnifying_glas.gif' %}"
              alt="search"
-             class="search-gif">
+             class="info-gif">
     {{ form.as_p }}
 
     <button type="submit" class="btn btn-success">Загрузить изображение</button>
